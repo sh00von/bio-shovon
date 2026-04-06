@@ -1,0 +1,23 @@
+{
+  "name": "Minaruzzaman Shovon | Links",
+  "short_name": "Shovon Links",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8F9FA",
+  "theme_color": "#1e293b",
+  "description": "Portfolio links and profile for Minaruzzaman Shovon",
+  "icons": [
+    {
+      "src": "https://shovon.bd/shovon.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://shovon.bd/shovon.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}

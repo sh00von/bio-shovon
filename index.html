@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minaruzzaman Shovon | Links</title>
+    
+    <!-- PWA settings -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#1e293b">
+    <meta name="description" content="Portfolio links and profile for Minaruzzaman Shovon">
+    
+    <!-- Preconnect to external resources for faster loading -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+
+    <!-- Google Fonts: Plus Jakarta Sans for a premium, tech-focused look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            500: '#64748b',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Hide scrollbar for clean UI but allow scrolling */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+        
+        body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .glass-button {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .toast-enter {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+        .toast-exit {
+            transform: translateY(20px) scale(0.95);
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="bg-[#F8F9FA] min-h-screen text-gray-800 antialiased relative overflow-x-hidden selection:bg-brand-900 selection:text-white">
+
+    <!-- Ambient Background Blobs for Premium Feel -->
+    <div class="fixed inset-0 w-full h-full z-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-0 left-1/4 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div class="absolute top-0 right-1/4 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+        <div class="absolute -bottom-8 left-1/3 w-72 h-72 bg-emerald-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="relative z-10 w-full max-w-[480px] mx-auto px-5 py-10 min-h-screen flex flex-col items-center">
+        
+        <!-- Top Action Bar -->
+        <header class="w-full flex justify-end gap-3 mb-4 opacity-0 animate-fade-in-up" style="animation-delay: 100ms;">
+            <!-- QR Code Button -->
+            <button onclick="openQRModal()" class="w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-sm border border-gray-100 text-gray-600 hover:text-brand-900 hover:shadow-md transition-all active:scale-95 group relative" aria-label="Show QR Code">
+                <i class="fa-solid fa-qrcode text-lg group-hover:-translate-y-0.5 transition-transform"></i>
+            </button>
+            <!-- Share Link Button -->
+            <button onclick="copyLink()" class="w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-sm border border-gray-100 text-gray-600 hover:text-brand-900 hover:shadow-md transition-all active:scale-95 group relative" aria-label="Share Link">
+                <i class="fa-solid fa-share-nodes text-lg group-hover:-translate-y-0.5 transition-transform"></i>
+            </button>
+        </header>
+
+        <!-- Profile Section -->
+        <section class="flex flex-col items-center w-full mb-10 opacity-0 animate-fade-in-up" style="animation-delay: 200ms;">
+            <!-- Avatar -->
+            <div class="relative mb-5">
+                <div class="w-28 h-28 rounded-full bg-gradient-to-tr from-brand-900 to-gray-600 p-[3px] shadow-xl shadow-brand-900/10">
+                    <div class="w-full h-full rounded-full border-[3px] border-white bg-white overflow-hidden flex justify-center items-center">
+                        <img src="https://shovon.bd/shovon.jpg" alt="Minaruzzaman Shovon" class="w-full h-full object-cover" onerror="this.outerHTML='<span class=\'text-4xl font-bold text-brand-900\'>S</span>'">
+                    </div>
+                </div>
+                <!-- Verification Badge -->
+                <div class="absolute bottom-1 right-1 bg-white p-1 rounded-full shadow-md flex items-center justify-center">
+                    <i class="fa-solid fa-circle-check text-[#3b82f6] text-xl bg-white rounded-full"></i>
+                </div>
+            </div>
+
+            <!-- Name & Bio -->
+            <h1 class="text-2xl font-bold text-gray-900 tracking-tight mb-1.5 text-center">Minaruzzaman Shovon</h1>
+            <p class="text-base font-medium text-brand-500 mb-4 text-center">Water Resources Engineer & Full Stack Developer</p>
+            <p class="text-sm text-gray-600 text-center max-w-xs leading-relaxed">
+                Building high-performance web applications, specializing in AI integration, and modeling hydrological systems.
+            </p>
+        </section>
+
+        <!-- Link Buttons Section -->
+        <section class="w-full space-y-3.5 mb-10">
+            
+            <!-- Link 1: Main Website (Primary) -->
+            <a href="https://shovon.bd/" target="_blank" class="opacity-0 animate-fade-in-up block w-full group relative" style="animation-delay: 300ms;">
+                <div class="glass-card w-full p-4 rounded-2xl flex items-center shadow-sm hover:shadow-md transition-all duration-300 transform group-hover:-translate-y-1 group-active:scale-[0.98]">
+                    <div class="w-12 h-12 rounded-xl bg-brand-900 text-white flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-globe text-xl"></i>
+                    </div>
+                    <div class="ml-4 flex-grow">
+                        <h2 class="text-base font-semibold text-gray-900">Official Website</h2>
+                        <p class="text-sm text-gray-500">shovon.bd</p>
+                    </div>
+                    <div class="shrink-0 text-gray-300 group-hover:text-brand-900 transition-colors group-hover:translate-x-1 duration-300">
+                        <i class="fa-solid fa-chevron-right text-sm"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Link 2: WhatsApp -->
+            <a href="https://wa.me/8801759311557" target="_blank" class="opacity-0 animate-fade-in-up block w-full group relative" style="animation-delay: 400ms;">
+                <div class="glass-button w-full p-4 rounded-2xl flex items-center shadow-sm hover:shadow-md transition-all duration-300 transform group-hover:-translate-y-1 group-active:scale-[0.98]">
+                    <div class="w-12 h-12 rounded-xl bg-white border border-gray-100 text-[#25D366] flex items-center justify-center shrink-0 shadow-sm">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    </div>
+                    <div class="ml-4 flex-grow">
+                        <h2 class="text-base font-semibold text-gray-900">WhatsApp</h2>
+                        <p class="text-sm text-gray-500">Message me directly</p>
+                    </div>
+                    <div class="shrink-0 text-gray-300 group-hover:text-gray-900 transition-colors group-hover:translate-x-1 duration-300">
+                        <i class="fa-solid fa-chevron-right text-sm"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Link 3: GitHub -->
+            <a href="https://github.com/sh00von" target="_blank" class="opacity-0 animate-fade-in-up block w-full group relative" style="animation-delay: 500ms;">
+                <div class="glass-button w-full p-4 rounded-2xl flex items-center shadow-sm hover:shadow-md transition-all duration-300 transform group-hover:-translate-y-1 group-active:scale-[0.98]">
+                    <div class="w-12 h-12 rounded-xl bg-white border border-gray-100 text-gray-700 flex items-center justify-center shrink-0 shadow-sm">
+                        <i class="fa-brands fa-github text-xl"></i>
+                    </div>
+                    <div class="ml-4 flex-grow">
+                        <h2 class="text-base font-semibold text-gray-900">GitHub</h2>
+                        <p class="text-sm text-gray-500">Explore my repositories</p>
+                    </div>
+                    <div class="shrink-0 text-gray-300 group-hover:text-gray-900 transition-colors group-hover:translate-x-1 duration-300">
+                        <i class="fa-solid fa-chevron-right text-sm"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Link 4: Contact / Email -->
+            <a href="mailto:hello@shovon.bd" class="opacity-0 animate-fade-in-up block w-full group relative" style="animation-delay: 600ms;">
+                <div class="glass-button w-full p-4 rounded-2xl flex items-center shadow-sm hover:shadow-md transition-all duration-300 transform group-hover:-translate-y-1 group-active:scale-[0.98]">
+                    <div class="w-12 h-12 rounded-xl bg-white border border-gray-100 text-gray-700 flex items-center justify-center shrink-0 shadow-sm">
+                        <i class="fa-solid fa-envelope text-xl"></i>
+                    </div>
+                    <div class="ml-4 flex-grow">
+                        <h2 class="text-base font-semibold text-gray-900">Get in Touch</h2>
+                        <p class="text-sm text-gray-500">hello@shovon.bd</p>
+                    </div>
+                    <div class="shrink-0 text-gray-300 group-hover:text-gray-900 transition-colors group-hover:translate-x-1 duration-300">
+                        <i class="fa-solid fa-chevron-right text-sm"></i>
+                    </div>
+                </div>
+            </a>
+        </section>
+
+        <!-- Social Icons Row -->
+        <section class="flex items-center justify-center gap-6 mt-auto opacity-0 animate-fade-in-up" style="animation-delay: 700ms;">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/minarsvn9090/" target="_blank" class="text-gray-400 hover:text-[#0077b5] hover:-translate-y-1 transition-all duration-300" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin text-2xl"></i>
+            </a>
+            
+            <!-- Google Scholar -->
+            <a href="https://scholar.google.com/citations?user=tht8Z1oAAAAJ&hl=en" target="_blank" class="text-gray-400 hover:text-[#4285F4] hover:-translate-y-1 transition-all duration-300" aria-label="Google Scholar">
+                <i class="fa-solid fa-graduation-cap text-2xl"></i>
+            </a>
+
+            <!-- ResearchGate -->
+            <a href="https://www.researchgate.net/profile/Md-Shovon-13" target="_blank" class="text-gray-400 hover:text-[#00ccbb] hover:-translate-y-1 transition-all duration-300" aria-label="ResearchGate">
+                <i class="fa-brands fa-researchgate text-2xl"></i>
+            </a>
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/minar.svn" target="_blank" class="text-gray-400 hover:text-[#1877F2] hover:-translate-y-1 transition-all duration-300" aria-label="Facebook">
+                <i class="fa-brands fa-facebook text-2xl"></i>
+            </a>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-8 text-center opacity-0 animate-fade-in-up" style="animation-delay: 800ms;">
+            <p class="text-xs text-gray-400 font-medium tracking-wide">© 2026 Minaruzzaman Shovon. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <!-- QR Code Modal -->
+    <div id="qr-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-gray-900/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 p-4">
+        <div id="qr-modal-content" class="bg-white p-8 rounded-3xl shadow-2xl transform scale-95 transition-transform duration-300 relative max-w-sm w-full text-center">
+            <!-- Close Button -->
+            <button onclick="closeQRModal()" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-50 text-gray-400 hover:text-gray-800 hover:bg-gray-100 transition-colors">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            
+            <h3 class="text-xl font-bold text-gray-900 mb-1">Scan to Visit</h3>
+            <p class="text-sm text-gray-500 mb-6">Scan this QR code to view my links</p>
+            
+            <div class="bg-gray-50 p-4 rounded-2xl border border-gray-100 mb-6 inline-block">
+                <!-- Using an open-source QR code generator API linked to your website -->
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://shovon.bd/" alt="QR Code for shovon.bd" class="w-48 h-48 rounded-lg">
+            </div>
+            
+            <div class="flex items-center justify-center gap-2 text-brand-900 font-semibold bg-brand-50 py-2.5 rounded-xl">
+                <i class="fa-solid fa-link"></i> shovon.bd
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Toast Notification -->
+    <div id="toast" class="fixed top-6 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-5 py-3 rounded-full shadow-2xl flex items-center gap-3 z-50 pointer-events-none transition-all duration-400 toast-exit">
+        <div class="bg-green-500/20 text-green-400 p-1 rounded-full flex items-center justify-center h-6 w-6">
+            <i class="fa-solid fa-check text-xs"></i>
+        </div>
+        <span class="text-sm font-semibold tracking-wide">Link copied to clipboard</span>
+    </div>
+
+    <!-- Hidden Input for Copy -->
+    <textarea id="hidden-link" class="absolute -left-[9999px] top-0 opacity-0" aria-hidden="true" tabindex="-1">https://shovon.bd/</textarea>
+
+    <script>
+        // Copy Link Functionality
+        function copyLink() {
+            const textArea = document.getElementById('hidden-link');
+            const toast = document.getElementById('toast');
+            
+            textArea.select();
+            textArea.setSelectionRange(0, 99999); 
+            
+            try {
+                document.execCommand('copy');
+                
+                toast.classList.remove('toast-exit');
+                toast.classList.add('toast-enter');
+                
+                setTimeout(() => {
+                    toast.classList.remove('toast-enter');
+                    toast.classList.add('toast-exit');
+                }, 3000);
+            } catch (err) {
+                console.error('Failed to copy', err);
+            }
+            window.getSelection().removeAllRanges();
+        }
+
+        // QR Code Modal Functionality
+        function openQRModal() {
+            const modal = document.getElementById('qr-modal');
+            const content = document.getElementById('qr-modal-content');
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            content.classList.remove('scale-95');
+        }
+
+        function closeQRModal() {
+            const modal = document.getElementById('qr-modal');
+            const content = document.getElementById('qr-modal-content');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            content.classList.add('scale-95');
+        }
+
+        // Close modal when clicking outside of it
+        document.getElementById('qr-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeQRModal();
+            }
+        });
+
+        // Register Service Worker for offline support and faster loading
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('Service Worker registered with scope:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.error('Service Worker registration failed:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
