@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    /* Hide scrollbar for clean UI but allow scrolling */
+    ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
+    
+    body {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .glass-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+    }
+
+    .glass-button {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .toast-enter {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    .toast-exit {
+        transform: translateY(20px) scale(0.95);
+        opacity: 0;
+    }
+}
